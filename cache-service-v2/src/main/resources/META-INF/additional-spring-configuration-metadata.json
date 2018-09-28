@@ -1,0 +1,25 @@
+{"properties": 
+[
+{
+  "name": "app.cache-config",
+  "type": "java.lang.String",
+  "description":"Cache Configuration for App"
+},
+{
+  "name": "app.cache-config.name",
+  "type": "java.lang.String",
+  "description":"Name of the Cache"
+},
+{
+  "name": "app.cache-config.expiry-seconds",
+  "type": "java.lang.Long",
+  "description":"TTL for Cache in Seconds"
+},
+{
+  "name": "app.cache-config.expiry-time",
+  "type": "java.lang.String",
+  "description":"Absolute Datetime for Cache Expiry in CRON Format"
+}
+
+
+]}

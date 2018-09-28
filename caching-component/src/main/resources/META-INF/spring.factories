@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.demo.caching.config.CacheConfig,com.demo.caching.config.AppConfig,com.demo.caching.config.RedisCacheConfig
+

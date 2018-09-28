@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: cache-service-v2
+ 

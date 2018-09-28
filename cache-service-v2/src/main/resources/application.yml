@@ -1,0 +1,33 @@
+#Port the service listens for requests
+server:
+  port: 9030
+
+
+management:
+  endpoints:
+    web:
+      base-path: /       
+
+    
+#Spring Caching and Redis Server Configuration    
+spring:
+  cache:
+    type: redis  #The Type of Caching Provider ( Provide value as 'none' to disable caching )
+  redis:
+    sentinel:
+      master: redis-cluster
+      nodes: 127.0.0.1:16380,127.0.0.1:16381,127.0.0.1:16382
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+
+
+app:
+  cache-config:
+    - name: plans
+      expiry-seconds: 300
+    - name: members
+      expiry-seconds: 100
+    - name: users
+      expiry-seconds: 200          
